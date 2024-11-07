@@ -5,6 +5,9 @@ import { Toaster } from 'react-hot-toast';
 import { useStore } from './stores/theme';
 import { useEffect } from 'react';
 
+// Import routes
+import AppRoutes from './routes';
+
 function App() {
 
   // destructure state "theme" from useStore
@@ -17,6 +20,7 @@ function App() {
 
   return (
     <>
+      <AppRoutes />
       <Toaster />
     </>
   )
