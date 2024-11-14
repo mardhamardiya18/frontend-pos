@@ -7,6 +7,7 @@ import { useStore } from "../stores/user.js";
 //import view login
 import Login from "../views/auth/login.jsx";
 import Dashboard from "../views/dashboard/Index.jsx";
+import CategoriesIndex from "../views/categories/index.jsx";
 
 export default function AppRoutes() {
   //destruct state "token" from store
@@ -23,6 +24,11 @@ export default function AppRoutes() {
       {/* route "/dashboard" */}
       <Route path="/dashboard" element={
         token ? <Dashboard /> : <Navigate to="/" replace />
+      } />
+
+      {/* route "/categories" */}
+      <Route path="/categories" element={
+        token ? <CategoriesIndex /> : <Navigate to="/" replace />
       } />
     </Routes>
   );
