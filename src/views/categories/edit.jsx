@@ -54,7 +54,7 @@ export default function CategoryEdit({ fetchData, categoryId }) {
 
         //call function "fetchCategory"
         fetchCategory();
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [categoryId, token]);
 
     //function "handleFileChange"
