@@ -11,6 +11,9 @@ import CategoriesIndex from "../views/categories/index.jsx";
 import ProductsIndex from "../views/products/index.jsx";
 import CustomersIndex from "../views/customers/index.jsx";
 import UsersIndex from "../views/users/index.jsx";
+import TransactionsIndex from "../views/transactions/index.jsx";
+import Print from "../views/transactions/print/Print.jsx";
+
 
 export default function AppRoutes() {
   //destruct state "token" from store
@@ -47,6 +50,16 @@ export default function AppRoutes() {
       {/* route "/users" */}
       <Route path="/users" element={
         token ? <UsersIndex /> : <Navigate to="/" replace />
+      } />
+
+      {/* route "/transactions" */}
+      <Route path="/transactions" element={
+        token ? <TransactionsIndex /> : <Navigate to="/" replace />
+      } />
+
+      {/* route "/transactions/print" */}
+      <Route path="/transactions/print" element={
+        token ? <Print /> : <Navigate to="/" replace />
       } />
     </Routes>
   );
