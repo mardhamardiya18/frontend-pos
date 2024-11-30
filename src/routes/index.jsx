@@ -13,6 +13,8 @@ import CustomersIndex from "../views/customers/index.jsx";
 import UsersIndex from "../views/users/index.jsx";
 import TransactionsIndex from "../views/transactions/index.jsx";
 import Print from "../views/transactions/print/Print.jsx";
+import Sales from "../views/sales/index.jsx";
+import Profits from "../views/profits/index.jsx";
 
 
 export default function AppRoutes() {
@@ -60,6 +62,16 @@ export default function AppRoutes() {
       {/* route "/transactions/print" */}
       <Route path="/transactions/print" element={
         token ? <Print /> : <Navigate to="/" replace />
+      } />
+
+      {/* route "/sales" */}
+      <Route path="/sales" element={
+        token ? <Sales /> : <Navigate to="/" replace />
+      } />
+
+      {/* route "/profits" */}
+      <Route path="/profits" element={
+        token ? <Profits /> : <Navigate to="/" replace />
       } />
     </Routes>
   );
